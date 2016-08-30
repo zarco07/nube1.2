@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="nube1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Piw-vE-hVc">
+                                <rect key="frame" x="78" y="49" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3IV-fy-G7a"/>
+                                    <constraint firstAttribute="width" constant="220" id="8bj-9z-Pm6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" indicatorStyle="black" editable="NO" text="Resultado" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UHM-Rs-ALA">
+                                <rect key="frame" x="68" y="87" width="240" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="71U-3B-Tjc"/>
+                                    <constraint firstAttribute="width" constant="240" id="Rkt-dy-pde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN a buscar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5G-jQ-uTy">
+                                <rect key="frame" x="131" y="20" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8EO-MR-SL7">
+                                <rect key="frame" x="68" y="234" width="240" height="199"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0JS-PN-oSC"/>
+                                    <constraint firstAttribute="height" constant="199" id="kcj-NL-v7W"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Piw-vE-hVc" firstAttribute="top" secondItem="h5G-jQ-uTy" secondAttribute="bottom" constant="8" id="0Rj-lV-VwT"/>
+                            <constraint firstItem="8EO-MR-SL7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Aai-HP-etq"/>
+                            <constraint firstItem="8EO-MR-SL7" firstAttribute="leading" secondItem="UHM-Rs-ALA" secondAttribute="leading" id="DDw-os-DXE"/>
+                            <constraint firstItem="8EO-MR-SL7" firstAttribute="top" secondItem="UHM-Rs-ALA" secondAttribute="bottom" constant="27" id="Gej-fp-XNc"/>
+                            <constraint firstItem="h5G-jQ-uTy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NJT-1n-N9H"/>
+                            <constraint firstItem="Piw-vE-hVc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Psf-3q-MPj"/>
+                            <constraint firstItem="UHM-Rs-ALA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vVt-43-gVa"/>
+                            <constraint firstItem="UHM-Rs-ALA" firstAttribute="top" secondItem="Piw-vE-hVc" secondAttribute="bottom" constant="8" id="vbA-Mb-hKg"/>
+                            <constraint firstItem="h5G-jQ-uTy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xm4-s8-JEA"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="buscarText" destination="Piw-vE-hVc" id="Ebg-tP-Biu"/>
+                        <outlet property="portada" destination="8EO-MR-SL7" id="qLy-tF-Iqw"/>
+                        <outlet property="resultadoTextView" destination="UHM-Rs-ALA" id="7q7-CR-anp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.5" y="424.5"/>
+        </scene>
+    </scenes>
+</document>
